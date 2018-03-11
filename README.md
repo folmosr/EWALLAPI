@@ -1,2 +1,2 @@
-# eventApi
-Repository for events api rest
+# Events API Rest
+api rest for CRUD actions under node and typescript
