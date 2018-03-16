@@ -1,5 +1,5 @@
-import * as express from 'express'
-import { Api } from './app'
+import * as express from "express";
+import { Api } from "./app";
 
-let api = new Api(express());
+let api: Api = new Api(express());
 api.run();

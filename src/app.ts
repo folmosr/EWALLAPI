@@ -1,8 +1,15 @@
-import * as express from 'express'
-import * as bodyParser from 'body-parser'
-import * as mongoose from 'mongoose'
-import env from './config/env';
-import eventRouter from './routes/eventRouter'
+import * as express from "express";
+import * as bodyParser from "body-parser";
+import * as mongoose from "mongoose";
+/**
+ * Routes
+ */
+import clasificationRoute from "./routes/clasification.route";
+import eventRoute  from "./routes/event.route";
+/**
+ * Config
+ */
+import env from "./config/env";
 
 export class Api {
   /**
@@ -19,40 +26,42 @@ export class Api {
     this.configureRoutes();
   }
 
-  /** 
-   * routes configuration 
-  */
-  private configureRoutes() {
-    this.router.get('/', (req: express.Request,
+  /**
+   * routes configuration
+   */
+  private configureRoutes():void {
+    this.router.get("/", (req: express.Request,
       response: express.Response) => {
-      response.send('welcome to events api!');
+      response.send("welcome to events api!");
     }
     );
-    this.router.use('/events', eventRouter);
-    this.app.use('/api', this.router);
+    this.router.use("/events", eventRoute);
+    this.router.use("/clasifications", clasificationRoute);
+    this.app.use("/api", this.router);
   }
 
-  private connectDb() {
-    mongoose.connect(`mongodb://${env.DBHOST}:${env.DBPORT}/${env.DBNAME}`, function (err: any, res: any) {
+  private connectDb():void {
+    mongoose.connect(`mongodb://${env.DBHOST}:${env.DBPORT}/${env.DBNAME}`, (err: any, res: any) => {
       if (err) {
-        console.log('ERROR: connecting to Database. ' + err);
+        console.log("ERROR: connecting to Database." + err);
+        process.exit(1);
       }
-      console.info(`===>  ⚙️ Database listening on mongodb://${env.DBHOST}:${env.DBPORT}/${env.DBNAME}`);
+      console.log(`===>  ⚙️ Database listening on mongodb://${env.DBHOST}:${env.DBPORT}/${env.DBNAME}`);
     });
   }
 
-  /** 
+  /**
    * start point app
-  */
-  public run() {
+   */
+  public run():void {
 
-    let httpServer = this.app.listen(env.PORT, (error: any) => {
+    let httpServer:any = this.app.listen(env.PORT, (error: any) => {
       if (error) {
         console.error(error);
       } else {
         this.connectDb();
-        const address = httpServer.address();
-        console.info(`==> 🌎 Listening on ${address.port}. Open up http://localhost:${address.port}/ in your browser.`);
+        const address:any = httpServer.address();
+        console.log(`==> 🌎 Listening on ${address.port}. Open up http://localhost:${address.port}/ in your browser.`);
       }
     });
   }

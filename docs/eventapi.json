@@ -1,0 +1,1290 @@
+{
+    "GUID": "76e6ea50-27ec-11e8-83cd-7b71d08efe25",
+    "lastModifTS": "2018-03-15T03:18:05.045Z",
+    "persistenceSchemaVersion": "1",
+    "description": "",
+    "comments": "",
+    "author": "FO",
+    "version": "V1",
+    "collections": [
+        {
+            "GUID": "0174e600-27f1-11e8-83cd-7b71d08efe25",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [
+                        "373dade0-27f5-11e8-83cd-7b71d08efe25",
+                        "2cc64d50-27fe-11e8-83cd-7b71d08efe25"
+                    ],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "0d26fa60-27f1-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "_id"
+                },
+                {
+                    "type": "string",
+                    "minLength": "",
+                    "maxLength": "",
+                    "pattern": "",
+                    "format": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "1b987ce0-27f1-11e8-83cd-7b71d08efe25",
+                    "description": "category name",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": false,
+                    "id": "",
+                    "name": "name"
+                },
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": false,
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "1f9f1b90-27f2-11e8-83cd-7b71d08efe25",
+                    "childRelationships": [],
+                    "foreignCollection": "afbca410-27f0-11e8-83cd-7b71d08efe25",
+                    "foreignField": [
+                        "afbca410-27f0-11e8-83cd-7b71d08efe25",
+                        "bc2e37e0-27f0-11e8-83cd-7b71d08efe25"
+                    ],
+                    "sample": "",
+                    "GUID": "776f3ae0-27f1-11e8-83cd-7b71d08efe25",
+                    "description": "clasification identifier",
+                    "comments": "",
+                    "dependencies": [
+                        "0d26fa60-27f1-11e8-83cd-7b71d08efe25"
+                    ],
+                    "required": true,
+                    "id": "",
+                    "name": "clasificationid"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "01800990-27f1-11e8-83cd-7b71d08efe25"
+            },
+            "collectionName": "categories",
+            "capped": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "dc318c80-27ec-11e8-83cd-7b71d08efe25"
+        },
+        {
+            "GUID": "afbca410-27f0-11e8-83cd-7b71d08efe25",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [
+                        "1f9f1b90-27f2-11e8-83cd-7b71d08efe25"
+                    ],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "bc2e37e0-27f0-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "_id"
+                },
+                {
+                    "type": "string",
+                    "minLength": "",
+                    "maxLength": "",
+                    "pattern": "",
+                    "format": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "c4e47160-27f0-11e8-83cd-7b71d08efe25",
+                    "description": "clasification name",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "name"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "afc15f00-27f0-11e8-83cd-7b71d08efe25"
+            },
+            "collectionName": "clasifications",
+            "capped": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "dc318c80-27ec-11e8-83cd-7b71d08efe25"
+        },
+        {
+            "GUID": "e65fe710-27ec-11e8-83cd-7b71d08efe25",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [
+                        "dda27940-27fa-11e8-83cd-7b71d08efe25"
+                    ],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "6d483020-27ed-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "_id"
+                },
+                {
+                    "type": "string",
+                    "minLength": "",
+                    "maxLength": "",
+                    "pattern": "",
+                    "format": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "891642b0-27ed-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "country name",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "name"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "e662cd40-27ec-11e8-83cd-7b71d08efe25"
+            },
+            "collectionName": "countries",
+            "capped": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "dc318c80-27ec-11e8-83cd-7b71d08efe25",
+            "hasCollation": false
+        },
+        {
+            "GUID": "fcf510f0-27f5-11e8-83cd-7b71d08efe25",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [
+                        "57594470-27fc-11e8-83cd-7b71d08efe25"
+                    ],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "14b403e0-27f6-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": false,
+                    "id": "",
+                    "name": "_id"
+                },
+                {
+                    "type": "string",
+                    "minLength": "",
+                    "maxLength": "",
+                    "pattern": "",
+                    "format": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "31c3e540-27f6-11e8-83cd-7b71d08efe25",
+                    "description": "currency name",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "name"
+                },
+                {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 5,
+                    "pattern": "",
+                    "format": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "57a1cde0-27f6-11e8-83cd-7b71d08efe25",
+                    "description": "currency symbol",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "symbol",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "fd031ab0-27f5-11e8-83cd-7b71d08efe25"
+            },
+            "collectionName": "currencies",
+            "capped": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "dc318c80-27ec-11e8-83cd-7b71d08efe25"
+        },
+        {
+            "GUID": "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "326267d0-27f9-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "_id"
+                },
+                {
+                    "type": "string",
+                    "minLength": "",
+                    "maxLength": "",
+                    "pattern": "",
+                    "format": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "391186b0-27f9-11e8-83cd-7b71d08efe25",
+                    "description": "event name",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": false,
+                    "id": "",
+                    "name": "name"
+                },
+                {
+                    "type": "timestamp",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "default": "",
+                    "format": "",
+                    "sample": "",
+                    "GUID": "4cb6f9c0-27f9-11e8-83cd-7b71d08efe25",
+                    "description": "event startup",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "startup"
+                },
+                {
+                    "type": "timestamp",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "default": "",
+                    "format": "",
+                    "sample": "",
+                    "GUID": "178fd6d0-27fa-11e8-83cd-7b71d08efe25",
+                    "description": "event endup",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": false,
+                    "id": "",
+                    "name": "endup"
+                },
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": false,
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "dda27940-27fa-11e8-83cd-7b71d08efe25",
+                    "childRelationships": [],
+                    "foreignCollection": "e65fe710-27ec-11e8-83cd-7b71d08efe25",
+                    "foreignField": [
+                        "e65fe710-27ec-11e8-83cd-7b71d08efe25",
+                        "6d483020-27ed-11e8-83cd-7b71d08efe25"
+                    ],
+                    "sample": "",
+                    "GUID": "d0af3250-27fa-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "countryid"
+                },
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": false,
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "57594470-27fc-11e8-83cd-7b71d08efe25",
+                    "childRelationships": [],
+                    "foreignCollection": "fcf510f0-27f5-11e8-83cd-7b71d08efe25",
+                    "foreignField": [
+                        "fcf510f0-27f5-11e8-83cd-7b71d08efe25",
+                        "14b403e0-27f6-11e8-83cd-7b71d08efe25"
+                    ],
+                    "sample": "",
+                    "GUID": "40ad9640-27fc-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "currencyid"
+                },
+                {
+                    "type": "array",
+                    "properties": [
+                        {
+                            "type": "objectId",
+                            "format": "",
+                            "primaryKey": false,
+                            "relationshipType": "Foreign Key",
+                            "parentRelationship": "f749c950-27fc-11e8-83cd-7b71d08efe25",
+                            "childRelationships": [],
+                            "foreignCollection": "d0c23b90-27ee-11e8-83cd-7b71d08efe25",
+                            "foreignField": [
+                                "d0c23b90-27ee-11e8-83cd-7b71d08efe25",
+                                "dcac76f0-27ee-11e8-83cd-7b71d08efe25"
+                            ],
+                            "sample": "",
+                            "GUID": "b501b530-27fc-11e8-83cd-7b71d08efe25",
+                            "description": "",
+                            "comments": "",
+                            "dependencies": [],
+                            "required": false,
+                            "id": "",
+                            "name": "New Field",
+                            "arrayItem": true
+                        }
+                    ],
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "additionalItems": true,
+                    "minItems": "",
+                    "maxItems": "",
+                    "enum": [],
+                    "GUID": "b4dd3d40-27fc-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": false,
+                    "id": "",
+                    "name": "soponsorsid"
+                },
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": false,
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "4a888430-27fd-11e8-83cd-7b71d08efe25",
+                    "childRelationships": [],
+                    "foreignCollection": "236dac90-27ee-11e8-83cd-7b71d08efe25",
+                    "foreignField": [
+                        "236dac90-27ee-11e8-83cd-7b71d08efe25",
+                        "38f52610-27ee-11e8-83cd-7b71d08efe25"
+                    ],
+                    "sample": "",
+                    "GUID": "3e75b230-27fd-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "organizerid"
+                },
+                {
+                    "type": "array",
+                    "properties": [
+                        {
+                            "type": "objectId",
+                            "format": "",
+                            "primaryKey": false,
+                            "relationshipType": "Foreign Key",
+                            "parentRelationship": "2cc64d50-27fe-11e8-83cd-7b71d08efe25",
+                            "childRelationships": [],
+                            "foreignCollection": "0174e600-27f1-11e8-83cd-7b71d08efe25",
+                            "foreignField": [
+                                "0174e600-27f1-11e8-83cd-7b71d08efe25",
+                                "0d26fa60-27f1-11e8-83cd-7b71d08efe25"
+                            ],
+                            "sample": "",
+                            "GUID": "cf7f8490-27fd-11e8-83cd-7b71d08efe25",
+                            "description": "",
+                            "comments": "",
+                            "dependencies": [],
+                            "required": false,
+                            "id": "",
+                            "name": "New Field",
+                            "arrayItem": true
+                        }
+                    ],
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "additionalItems": true,
+                    "minItems": "",
+                    "maxItems": "",
+                    "enum": [],
+                    "GUID": "cf5b33b0-27fd-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "categoriesid"
+                },
+                {
+                    "type": "array",
+                    "properties": [
+                        {
+                            "type": "objectId",
+                            "format": "",
+                            "primaryKey": false,
+                            "relationshipType": "Foreign Key",
+                            "parentRelationship": "dc4d4cb0-27fe-11e8-83cd-7b71d08efe25",
+                            "childRelationships": [],
+                            "foreignCollection": "eb4a51e0-27f4-11e8-83cd-7b71d08efe25",
+                            "foreignField": [
+                                "eb4a51e0-27f4-11e8-83cd-7b71d08efe25",
+                                "019653e0-27f5-11e8-83cd-7b71d08efe25"
+                            ],
+                            "sample": "",
+                            "GUID": "9d79c5e0-27fe-11e8-83cd-7b71d08efe25",
+                            "description": "",
+                            "comments": "",
+                            "dependencies": [],
+                            "required": false,
+                            "id": "",
+                            "name": "New Field",
+                            "arrayItem": true
+                        }
+                    ],
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "additionalItems": true,
+                    "minItems": "",
+                    "maxItems": "",
+                    "enum": [],
+                    "GUID": "9d580d10-27fe-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": false,
+                    "id": "",
+                    "name": "modalitiesid"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "19ce98b0-27f9-11e8-83cd-7b71d08efe25"
+            },
+            "collectionName": "events",
+            "capped": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "dc318c80-27ec-11e8-83cd-7b71d08efe25"
+        },
+        {
+            "GUID": "eb4a51e0-27f4-11e8-83cd-7b71d08efe25",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [
+                        "dc4d4cb0-27fe-11e8-83cd-7b71d08efe25"
+                    ],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "019653e0-27f5-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "_id"
+                },
+                {
+                    "type": "string",
+                    "minLength": "",
+                    "maxLength": "",
+                    "pattern": "",
+                    "format": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "09bfddc0-27f5-11e8-83cd-7b71d08efe25",
+                    "description": "modality name",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "name"
+                },
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": false,
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "373dade0-27f5-11e8-83cd-7b71d08efe25",
+                    "childRelationships": [],
+                    "foreignCollection": "0174e600-27f1-11e8-83cd-7b71d08efe25",
+                    "foreignField": [
+                        "0174e600-27f1-11e8-83cd-7b71d08efe25",
+                        "0d26fa60-27f1-11e8-83cd-7b71d08efe25"
+                    ],
+                    "sample": "",
+                    "GUID": "27b9a9f0-27f5-11e8-83cd-7b71d08efe25",
+                    "description": "category identifier",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": false,
+                    "id": "",
+                    "name": "categoryid"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "eb5882b0-27f4-11e8-83cd-7b71d08efe25"
+            },
+            "collectionName": "modalities",
+            "capped": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "dc318c80-27ec-11e8-83cd-7b71d08efe25"
+        },
+        {
+            "GUID": "236dac90-27ee-11e8-83cd-7b71d08efe25",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [
+                        "4a888430-27fd-11e8-83cd-7b71d08efe25"
+                    ],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "38f52610-27ee-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "_id"
+                },
+                {
+                    "type": "string",
+                    "minLength": "",
+                    "maxLength": "",
+                    "pattern": "",
+                    "format": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "6b9cad90-27ee-11e8-83cd-7b71d08efe25",
+                    "description": "Organizer name",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "name"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "2371cb40-27ee-11e8-83cd-7b71d08efe25"
+            },
+            "collectionName": "organizers",
+            "capped": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "dc318c80-27ec-11e8-83cd-7b71d08efe25"
+        },
+        {
+            "GUID": "d0c23b90-27ee-11e8-83cd-7b71d08efe25",
+            "type": "object",
+            "description": "",
+            "comments": "",
+            "$schema": "",
+            "additionalProperties": false,
+            "properties": [
+                {
+                    "type": "objectId",
+                    "format": "",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [
+                        "f749c950-27fc-11e8-83cd-7b71d08efe25"
+                    ],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "sample": "",
+                    "GUID": "dcac76f0-27ee-11e8-83cd-7b71d08efe25",
+                    "description": "",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "_id"
+                },
+                {
+                    "type": "string",
+                    "minLength": "",
+                    "maxLength": "",
+                    "pattern": "",
+                    "format": "",
+                    "default": "",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "e5456470-27ee-11e8-83cd-7b71d08efe25",
+                    "description": "sponsors name",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "name"
+                },
+                {
+                    "type": "binary",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "parentRelationship": "",
+                    "childRelationships": [],
+                    "foreignCollection": "",
+                    "foreignField": [],
+                    "default": "",
+                    "gridFS": "files",
+                    "enum": [],
+                    "sample": "",
+                    "GUID": "81599fe0-27f7-11e8-83cd-7b71d08efe25",
+                    "description": "sponsor logo",
+                    "comments": "",
+                    "dependencies": [],
+                    "required": true,
+                    "id": "",
+                    "name": "logo"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "d0caa000-27ee-11e8-83cd-7b71d08efe25"
+            },
+            "collectionName": "sponsors",
+            "capped": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "size": "",
+            "max": "",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [],
+            "collation": {},
+            "sharding": {
+                "key": "",
+                "hashed": false,
+                "unique": true,
+                "numInitialChunks": "",
+                "collation": "null",
+                "zone": "",
+                "comments": ""
+            },
+            "bucketId": "dc318c80-27ec-11e8-83cd-7b71d08efe25"
+        }
+    ],
+    "buckets": [
+        {
+            "GUID": "dc318c80-27ec-11e8-83cd-7b71d08efe25",
+            "name": "eventapiDB",
+            "type": "bucket",
+            "description": "",
+            "comments": "",
+            "collectionIds": [
+                "e65fe710-27ec-11e8-83cd-7b71d08efe25",
+                "236dac90-27ee-11e8-83cd-7b71d08efe25",
+                "d0c23b90-27ee-11e8-83cd-7b71d08efe25",
+                "afbca410-27f0-11e8-83cd-7b71d08efe25",
+                "0174e600-27f1-11e8-83cd-7b71d08efe25",
+                "eb4a51e0-27f4-11e8-83cd-7b71d08efe25",
+                "fcf510f0-27f5-11e8-83cd-7b71d08efe25",
+                "19bf2f60-27f9-11e8-83cd-7b71d08efe25"
+            ],
+            "backgroundColor": {
+                "r": 96,
+                "g": 125,
+                "b": 139,
+                "a": 1
+            },
+            "show": true
+        }
+    ],
+    "views": [],
+    "relationships": [
+        {
+            "GUID": "1f9f1b90-27f2-11e8-83cd-7b71d08efe25",
+            "name": "clasification_categories_FK",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "afbca410-27f0-11e8-83cd-7b71d08efe25",
+            "parentField": [
+                "afbca410-27f0-11e8-83cd-7b71d08efe25",
+                "bc2e37e0-27f0-11e8-83cd-7b71d08efe25"
+            ],
+            "parentCardinality": "1",
+            "childCollection": "0174e600-27f1-11e8-83cd-7b71d08efe25",
+            "childField": [
+                "0174e600-27f1-11e8-83cd-7b71d08efe25",
+                "776f3ae0-27f1-11e8-83cd-7b71d08efe25"
+            ],
+            "childCardinality": "1"
+        },
+        {
+            "GUID": "373dade0-27f5-11e8-83cd-7b71d08efe25",
+            "name": "New Relationship",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "0174e600-27f1-11e8-83cd-7b71d08efe25",
+            "parentField": [
+                "0174e600-27f1-11e8-83cd-7b71d08efe25",
+                "0d26fa60-27f1-11e8-83cd-7b71d08efe25"
+            ],
+            "parentCardinality": "1",
+            "childCollection": "eb4a51e0-27f4-11e8-83cd-7b71d08efe25",
+            "childField": [
+                "eb4a51e0-27f4-11e8-83cd-7b71d08efe25",
+                "27b9a9f0-27f5-11e8-83cd-7b71d08efe25"
+            ],
+            "childCardinality": "1"
+        },
+        {
+            "GUID": "dda27940-27fa-11e8-83cd-7b71d08efe25",
+            "name": "New Relationship(1)",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "e65fe710-27ec-11e8-83cd-7b71d08efe25",
+            "parentField": [
+                "e65fe710-27ec-11e8-83cd-7b71d08efe25",
+                "6d483020-27ed-11e8-83cd-7b71d08efe25"
+            ],
+            "parentCardinality": "1",
+            "childCollection": "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+            "childField": [
+                "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+                "d0af3250-27fa-11e8-83cd-7b71d08efe25"
+            ],
+            "childCardinality": "1"
+        },
+        {
+            "GUID": "57594470-27fc-11e8-83cd-7b71d08efe25",
+            "name": "New Relationship(2)",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "fcf510f0-27f5-11e8-83cd-7b71d08efe25",
+            "parentField": [
+                "fcf510f0-27f5-11e8-83cd-7b71d08efe25",
+                "14b403e0-27f6-11e8-83cd-7b71d08efe25"
+            ],
+            "parentCardinality": "1",
+            "childCollection": "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+            "childField": [
+                "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+                "40ad9640-27fc-11e8-83cd-7b71d08efe25"
+            ],
+            "childCardinality": "1"
+        },
+        {
+            "GUID": "f749c950-27fc-11e8-83cd-7b71d08efe25",
+            "name": "New Relationship(4)",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "d0c23b90-27ee-11e8-83cd-7b71d08efe25",
+            "parentField": [
+                "d0c23b90-27ee-11e8-83cd-7b71d08efe25",
+                "dcac76f0-27ee-11e8-83cd-7b71d08efe25"
+            ],
+            "parentCardinality": "1",
+            "childCollection": "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+            "childField": [
+                "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+                "b4dd3d40-27fc-11e8-83cd-7b71d08efe25",
+                "b501b530-27fc-11e8-83cd-7b71d08efe25"
+            ],
+            "childCardinality": "1"
+        },
+        {
+            "GUID": "4a888430-27fd-11e8-83cd-7b71d08efe25",
+            "name": "New Relationship(3)",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "236dac90-27ee-11e8-83cd-7b71d08efe25",
+            "parentField": [
+                "236dac90-27ee-11e8-83cd-7b71d08efe25",
+                "38f52610-27ee-11e8-83cd-7b71d08efe25"
+            ],
+            "parentCardinality": "1",
+            "childCollection": "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+            "childField": [
+                "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+                "3e75b230-27fd-11e8-83cd-7b71d08efe25"
+            ],
+            "childCardinality": "1"
+        },
+        {
+            "GUID": "2cc64d50-27fe-11e8-83cd-7b71d08efe25",
+            "name": "New Relationship(6)",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "0174e600-27f1-11e8-83cd-7b71d08efe25",
+            "parentField": [
+                "0174e600-27f1-11e8-83cd-7b71d08efe25",
+                "0d26fa60-27f1-11e8-83cd-7b71d08efe25"
+            ],
+            "parentCardinality": "1",
+            "childCollection": "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+            "childField": [
+                "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+                "cf5b33b0-27fd-11e8-83cd-7b71d08efe25",
+                "cf7f8490-27fd-11e8-83cd-7b71d08efe25"
+            ],
+            "childCardinality": "1"
+        },
+        {
+            "GUID": "dc4d4cb0-27fe-11e8-83cd-7b71d08efe25",
+            "name": "New Relationship(5)",
+            "description": "",
+            "comments": "",
+            "relationshipType": "Foreign Key",
+            "parentCollection": "eb4a51e0-27f4-11e8-83cd-7b71d08efe25",
+            "parentField": [
+                "eb4a51e0-27f4-11e8-83cd-7b71d08efe25",
+                "019653e0-27f5-11e8-83cd-7b71d08efe25"
+            ],
+            "parentCardinality": "1",
+            "childCollection": "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+            "childField": [
+                "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+                "9d580d10-27fe-11e8-83cd-7b71d08efe25",
+                "9d79c5e0-27fe-11e8-83cd-7b71d08efe25"
+            ],
+            "childCardinality": "1"
+        }
+    ],
+    "users": [],
+    "idToNameHashTable": {
+        "dc318c80-27ec-11e8-83cd-7b71d08efe25": "eventapiDB",
+        "e65fe710-27ec-11e8-83cd-7b71d08efe25": "countries",
+        "1d0688a0-27ed-11e8-83cd-7b71d08efe25": "New view",
+        "6d483020-27ed-11e8-83cd-7b71d08efe25": "_id",
+        "891642b0-27ed-11e8-83cd-7b71d08efe25": "name",
+        "236dac90-27ee-11e8-83cd-7b71d08efe25": "organizers",
+        "38f52610-27ee-11e8-83cd-7b71d08efe25": "_id",
+        "6b9cad90-27ee-11e8-83cd-7b71d08efe25": "name",
+        "d0c23b90-27ee-11e8-83cd-7b71d08efe25": "sponsors",
+        "dcac76f0-27ee-11e8-83cd-7b71d08efe25": "_id",
+        "e5456470-27ee-11e8-83cd-7b71d08efe25": "name",
+        "afbca410-27f0-11e8-83cd-7b71d08efe25": "clasifications",
+        "bc2e37e0-27f0-11e8-83cd-7b71d08efe25": "_id",
+        "c4e47160-27f0-11e8-83cd-7b71d08efe25": "name",
+        "0174e600-27f1-11e8-83cd-7b71d08efe25": "categories",
+        "0d26fa60-27f1-11e8-83cd-7b71d08efe25": "_id",
+        "1b987ce0-27f1-11e8-83cd-7b71d08efe25": "name",
+        "776f3ae0-27f1-11e8-83cd-7b71d08efe25": "clasificationid",
+        "eb4a51e0-27f4-11e8-83cd-7b71d08efe25": "modalities",
+        "019653e0-27f5-11e8-83cd-7b71d08efe25": "_id",
+        "09bfddc0-27f5-11e8-83cd-7b71d08efe25": "name",
+        "27b9a9f0-27f5-11e8-83cd-7b71d08efe25": "categoryid",
+        "fcf510f0-27f5-11e8-83cd-7b71d08efe25": "currencies",
+        "14b403e0-27f6-11e8-83cd-7b71d08efe25": "_id",
+        "31c3e540-27f6-11e8-83cd-7b71d08efe25": "name",
+        "57a1cde0-27f6-11e8-83cd-7b71d08efe25": "symbol",
+        "81599fe0-27f7-11e8-83cd-7b71d08efe25": "logo",
+        "19bf2f60-27f9-11e8-83cd-7b71d08efe25": "events",
+        "326267d0-27f9-11e8-83cd-7b71d08efe25": "_id",
+        "391186b0-27f9-11e8-83cd-7b71d08efe25": "name",
+        "4cb6f9c0-27f9-11e8-83cd-7b71d08efe25": "startup",
+        "178fd6d0-27fa-11e8-83cd-7b71d08efe25": "endup",
+        "d0af3250-27fa-11e8-83cd-7b71d08efe25": "countryid",
+        "40ad9640-27fc-11e8-83cd-7b71d08efe25": "currencyid",
+        "b4dd3d40-27fc-11e8-83cd-7b71d08efe25": "soponsorsid",
+        "3e75b230-27fd-11e8-83cd-7b71d08efe25": "organizerid",
+        "cf5b33b0-27fd-11e8-83cd-7b71d08efe25": "categoriesid",
+        "9d580d10-27fe-11e8-83cd-7b71d08efe25": "modalitiesid"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "76e6ea51-27ec-11e8-83cd-7b71d08efe25"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "76e6ea52-27ec-11e8-83cd-7b71d08efe25"
+    },
+    "modelName": "eventapi",
+    "dbVersion": "v3.4",
+    "dbVendor": "MongoDB",
+    "hideModelViews": false,
+    "appTarget": "MONGODB",
+    "creationTS": "2018-03-15T01:01:59.541Z",
+    "enableSharding": true,
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "e65fe710-27ec-11e8-83cd-7b71d08efe25",
+                        "x": 136,
+                        "y": 654,
+                        "width": 193,
+                        "height": 75,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "236dac90-27ee-11e8-83cd-7b71d08efe25",
+                        "x": 726,
+                        "y": 386,
+                        "width": 192,
+                        "height": 77,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "d0c23b90-27ee-11e8-83cd-7b71d08efe25",
+                        "x": 676,
+                        "y": 152,
+                        "width": 200,
+                        "height": 100,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "afbca410-27f0-11e8-83cd-7b71d08efe25",
+                        "x": 126,
+                        "y": 150,
+                        "width": 200,
+                        "height": 100,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "0174e600-27f1-11e8-83cd-7b71d08efe25",
+                        "x": 124,
+                        "y": 268,
+                        "width": 200,
+                        "height": 100,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "eb4a51e0-27f4-11e8-83cd-7b71d08efe25",
+                        "x": 124,
+                        "y": 488,
+                        "width": 200,
+                        "height": 100,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "fcf510f0-27f5-11e8-83cd-7b71d08efe25",
+                        "x": 402,
+                        "y": 150,
+                        "width": 200,
+                        "height": 100,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "19bf2f60-27f9-11e8-83cd-7b71d08efe25",
+                        "x": 470,
+                        "y": 418,
+                        "width": 202,
+                        "height": 202,
+                        "color": {}
+                    }
+                ],
+                "buckets": [
+                    {
+                        "x": 84,
+                        "y": 80,
+                        "GUID": "dc318c80-27ec-11e8-83cd-7b71d08efe25"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "details": true
+        }
+    }
+}
