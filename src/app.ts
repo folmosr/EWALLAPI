@@ -5,7 +5,8 @@ import * as mongoose from "mongoose";
  * Routes
  */
 import clasificationRoute from "./routes/clasification.route";
-import eventRoute  from "./routes/event.route";
+import categoryRoute from "./routes/category.route";
+import eventRoute from "./routes/event.route";
 /**
  * Config
  */
@@ -26,21 +27,34 @@ export class Api {
     this.configureRoutes();
   }
 
+  private errorHandling(error: express.Error, req: express.Request, res: express.Response, next: express.Next): void {
+    res.status(error.status || env.ERRORCODE);
+    res.json({
+      error: {
+        message: error.message
+      }
+    });
+  }
   /**
    * routes configuration
    */
-  private configureRoutes():void {
+  private configureRoutes(): void {
     this.router.get("/", (req: express.Request,
       response: express.Response) => {
       response.send("welcome to events api!");
     }
     );
     this.router.use("/events", eventRoute);
+    this.router.use("/categories", categoryRoute);
     this.router.use("/clasifications", clasificationRoute);
+    this.router.use((error: express.Error,
+      req: express.Request,
+      res: express.Response,
+      next: express.Next) => this.errorHandling(error, req, res, next));
     this.app.use("/api", this.router);
   }
 
-  private connectDb():void {
+  private connectDb(): void {
     mongoose.connect(`mongodb://${env.DBHOST}:${env.DBPORT}/${env.DBNAME}`, (err: any, res: any) => {
       if (err) {
         console.log("ERROR: connecting to Database." + err);
@@ -53,14 +67,14 @@ export class Api {
   /**
    * start point app
    */
-  public run():void {
+  public run(): void {
 
-    let httpServer:any = this.app.listen(env.PORT, (error: any) => {
+    let httpServer: any = this.app.listen(env.PORT, (error: any) => {
       if (error) {
         console.error(error);
       } else {
         this.connectDb();
-        const address:any = httpServer.address();
+        const address: any = httpServer.address();
         console.log(`==> 🌎 Listening on ${address.port}. Open up http://localhost:${address.port}/ in your browser.`);
       }
     });
