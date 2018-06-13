@@ -1,7 +1,7 @@
 import { Schema } from "mongoose";
 export interface ICategory {
-    Name:string;
-    ClasificationId:Schema.Types.ObjectId;
-    ParentId:Schema.Types.ObjectId;
-    CreatedAt:Date;
+    name:String;
+    clasificationId:Schema.Types.ObjectId;
+    parentId:Schema.Types.ObjectId;
+    createdAt: Date;
 }

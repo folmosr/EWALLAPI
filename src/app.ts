@@ -6,7 +6,8 @@ import * as mongoose from "mongoose";
  */
 import clasificationRoute from "./routes/clasification.route";
 import categoryRoute from "./routes/category.route";
-import eventRoute from "./routes/event.route";
+import organizationRoute from "./routes/organization.route";
+import countryRoute from "./routes/country.route";
 /**
  * Config
  */
@@ -39,14 +40,21 @@ export class Api {
    * routes configuration
    */
   private configureRoutes(): void {
+    this.app.use((req: express.Request, res: express.Response, next: express.Next) => {
+      res.header("Access-Control-Allow-Origin", "*");
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      res.header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS");
+      next();
+    });
     this.router.get("/", (req: express.Request,
       response: express.Response) => {
       response.send("welcome to events api!");
     }
     );
-    this.router.use("/events", eventRoute);
     this.router.use("/categories", categoryRoute);
     this.router.use("/clasifications", clasificationRoute);
+    this.router.use("/organizations", organizationRoute);
+    this.router.use("/countries", countryRoute);
     this.router.use((error: express.Error,
       req: express.Request,
       res: express.Response,

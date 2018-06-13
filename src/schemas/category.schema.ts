@@ -5,7 +5,7 @@ export const CategorytSchema: Schema = new Schema({
     name: { type: String, required: true },
     clasificationId: { type: Schema.Types.ObjectId, required: true },
     parentId:Schema.Types.ObjectId,
-    created_at: Date
+    createdAt: Date
 });
 
 export const CategoryModel: Model<ICategory> = model<ICategory>("categories", CategorytSchema);
