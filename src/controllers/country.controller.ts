@@ -10,6 +10,11 @@ export class Country {
         res.json(countries);
     }
 
+    async getByCode(req: Request, res: Response): Promise<void> {
+        const countries: Model<ICountry> = await CountryModel.find({code:req.params.code});
+        res.json(countries);
+    }
+
     async create(req: Request, res: Response): Promise<void> {
         const model: Model<ICountry> = new CountryModel({
             name: req.body.name,
@@ -29,13 +34,15 @@ export class Country {
                 code: req.body.code,
                 currency: req.body.currency
             });
-        const category: Model<ICountry> = await CountryModel.findById(req.body.id);
-        res.json(category);
+        const country: Model<ICountry> = await CountryModel.findById(req.body.id);
+        res.json(country);
     }
 
     async delete(req: Request, res: Response): Promise<void> {
-        const category: Model<ICountry> = await CountryModel.findByIdAndRemove(req.body.id);
-        await CountryModel.deleteMany({ parentId: category.id });
-        res.status(200).json({ message: "Countr(y/ies) deleted" });
+        await CountryModel.findByIdAndRemove({_id: req.params.id}, (err) => {
+            if (!err) {
+                res.status(200).json({ message: "Countr(y/ies) deleted" });
+            }
+        });
     }
 }

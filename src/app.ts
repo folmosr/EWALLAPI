@@ -22,8 +22,8 @@ export class Api {
    * @param app - express application
    */
   constructor(private app: express.Express) {
-    this.app.use(bodyParser.urlencoded({ extended: true }));
-    this.app.use(bodyParser.json());
+    this.app.use(bodyParser.urlencoded({limit: "10mb", extended: true }));
+    this.app.use(bodyParser.json({limit: "10mb"}));
     this.router = express.Router();
     this.configureRoutes();
   }
@@ -42,7 +42,10 @@ export class Api {
   private configureRoutes(): void {
     this.app.use((req: express.Request, res: express.Response, next: express.Next) => {
       res.header("Access-Control-Allow-Origin", "*");
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      res.header("Access-Control-Allow-Headers",
+        "Access-Control-Allow-Headers,Origin," +
+        "Accept,X-Requested-With, Content-Type,Access-Control-Request-Method," +
+        "Access-Control-Request-Headers,Authorization,code,currency,name,id");
       res.header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS");
       next();
     });

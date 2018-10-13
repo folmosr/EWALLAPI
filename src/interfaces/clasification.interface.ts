@@ -1,5 +1,5 @@
-import { Schema } from "mongoose";
 export interface IClasification {
     name:String;
+    logo: Object;
     createdAt: Date;
 }

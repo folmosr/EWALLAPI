@@ -3,6 +3,7 @@ import { IClasification } from "../interfaces/clasification.interface";
 
 export const ClasificationSchema: Schema = new Schema({
     name: { type: String, required: true },
+    logo: { data: Schema.Types.Buffer, contentType: String },
     createdAt: Date
 });
 
